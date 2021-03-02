@@ -84,6 +84,7 @@ module "ecs" {
   domain                  = var.primary_domain
   region                  = var.region
   docker_image            = var.docker_image
+  docker_image_version    = var.docker_image_version
   container_port          = var.container_port
 
   container_health_check_grace_period_seconds = 180
