@@ -6,6 +6,7 @@ I developed this for the sole purpose of running Snipe IT myself on AWS, with:
 - EFS for the config/uploads data storage
 - ECS to run the snipe PHP codebase in a container, using the image [published by linuxserver](https://docs.linuxserver.io/images/docker-snipe-it)
 - Route53 to create entries for a primary domain, which is assumed to be used solely for this Snipe IT install. In my case, I used a [free .tk domain name from Freenom](https://www.freenom.com/en/index.html) and set up hosted zone in Route53 manually to get the nameserver values to set in the Freenom control panel.
+- ACM for SSL certificate on the primary domain
 - SES for outbound emails (e.g. password reset, reports, etc.)
 - EC2 for an _optional_ debug/test instance - I used this to check/tweak database values by connecting to the instance over SSH, then to the RDS DB using the mysql client, and mounted the EFS config/data volume to check/tweak uploads too.
 
