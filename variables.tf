@@ -30,7 +30,7 @@ variable "docker_image" {
 }
 variable "docker_image_version" {
   type    = string
-  default = "version-v5.0.12"
+  default = "version-v5.0.12-local-0.0.1"
 }
 variable "container_port" {
   type    = number
